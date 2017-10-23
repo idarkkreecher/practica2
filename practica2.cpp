@@ -1,21 +1,30 @@
 #include <iostream>
-
+#include<windows.h>
 using namespace std;
 
-int factorial(int num1);
-
 int main(){
-	int num1;
-	cout<<"Inserta un numero para sacar su factorial: ";
-	cin>>num1;
-	cout<<"El factorial de "<<num1<<" es "<<factorial(num1)<<endl;
-	system("PAUSE>nul");
-}
-
-int factorial(int num1){
-	int acum=1;
-	for (int i=1; i<=num1; i++){
-		acum=acum*i;
+	int num[1000];
+	int n;
+	cout<<"este programa mostrara la serie de fibonacci, inserte los numeros a mostrar"<<endl;
+	cin>>n;
+	if(n<0)
+	{
+		cout<<"no valido"<<endl;
 	}
-	return acum;
+	else
+	{
+	num[0]=0;
+	num[1]=1;
+	cout<<num[0]<<endl<<num[1]<<endl;
+	for(int i=2;i<n;i++)
+	{
+	num[i]=num[i-1]+num[i-2];
+	cout<<num[i]<<endl;
+
+	
+	}
+	}
+
+		system("pause");
+			return 0;
 }
